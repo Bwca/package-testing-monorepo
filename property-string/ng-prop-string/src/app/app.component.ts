@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
-import { getPropPath } from 'property-string-path';
+import { propertyStringPathFactory } from 'property-string-path';
 import { User } from './models/user';
 
 @Component({
@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   public title = 'ng-prop-string';
   public form: FormGroup;
 
-  public controlPath = getPropPath<User>();
+  public controlPath = propertyStringPathFactory<User>();
 
   constructor(private fb: FormBuilder) {}
 

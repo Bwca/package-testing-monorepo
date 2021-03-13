@@ -1,12 +1,13 @@
+import { useEffect } from 'react';
+
 import { useForm } from 'react-hook-form';
-import { getPropPath } from 'property-string-path';
+import { propertyStringPathFactory } from 'property-string-path';
 
 import { User } from './user.model';
-import { useEffect } from 'react';
 import './App.css';
 
 export const App = () => {
-  const formKeys = getPropPath<User>();
+  const formKeys = propertyStringPathFactory<User>();
   const { register, watch } = useForm<User>();
 
   const lat = watch(formKeys('address.geo.lat'));
