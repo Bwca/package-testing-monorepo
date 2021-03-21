@@ -1,0 +1,14 @@
+{
+    "plugins": ["react-css-module-hints", "@typescript-eslint"],
+    "rules": {
+      "react-css-module-hints/no-non-existant-classes": "warn"
+  },
+  
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  }
+}
+  
